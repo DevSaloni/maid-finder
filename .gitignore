@@ -1,0 +1,45 @@
+# ---------------------
+# Global ignores
+# ---------------------
+node_modules/
+dist/
+build/
+.env
+.env.local
+.env.*.local
+.DS_Store
+
+# ---------------------
+# FRONTEND (React/JS)
+# ---------------------
+frontend/node_modules/
+frontend/.env
+frontend/.env.local
+frontend/build/
+frontend/.parcel-cache/
+frontend/.next/
+frontend/npm-debug.log*
+
+# ---------------------
+# BACKEND (Node + Express)
+# ---------------------
+backend/node_modules/
+backend/.env
+backend/.env.local
+backend/logs/*
+backend/debug.log
+
+# ---------------------
+# BLOCKCHAIN (Hardhat)
+# ---------------------
+blockchain/node_modules/
+blockchain/artifacts/
+blockchain/cache/
+blockchain/typechain/
+blockchain/.env
+blockchain/contracts/*.dbg.json
+
+# ---------------------
+# VS Code
+# ---------------------
+.vscode/

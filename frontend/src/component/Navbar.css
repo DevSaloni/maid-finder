@@ -1,104 +1,367 @@
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 
-.navbar-container {
-  width: 100%;
-  padding: 15px 30px;
-  background-color: rgba(216, 27, 96, 0.3);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  position: sticky;
-  top: 0;
-  z-index: 999;
-}
-
+/* 🌟 Navbar Base */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 18px 60px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 99999;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Logo Styling */
-.logo p {
-  font-size: 39px;
-  font-weight: bold;
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+/* 🌟 Logo */
+.nav-logo {
+  font-family: "Pacifico", cursive;
+  font-size: 44px;
+  font-weight: 900;
+  color: red;
+  font-style: italic;
+  letter-spacing: 2px;
 }
 
-.first-word {
-  color: #880e4f;
-}
-
-.second-word {
-  color: #f8bbd0;
-}
-
-/* Button Group */
-.right-section {
+/* 🌟 Nav Links */
+.nav-links {
   display: flex;
   align-items: center;
-  margin-right: 30px;
-  gap: 30px;
+  gap: 27px;
+  list-style: none;
 }
 
-.btn-group {
+.nav-links li a,
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 16px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover,
+.nav-link:hover {
+  color: red;
+  background: rgba(255, 0, 0, 0.08);
+}
+
+.nav-right {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 18px;
 }
 
-.nav-btn {
-  background-color: #d81b60;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 15px;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.nav-btn:hover {
-  background-color: #ad1457;
-}
-
-.wallet-btn{
- background-color: #7BD9F6;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  font-size: 15px;
-  border-radius: 25px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-.wallet-btn:hover {
-  background-color: #009AEE;
-}
-
-
-/* Profile Section */
-.profile-section {
+/* 🌟 Dropdown (NEW DESIGN) */
+.dropdown {
   position: relative;
 }
 
-.menu-icon {
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
+/* 🔥 Dropdown Box */
+.dropdown-menu {
+  position: absolute;
+  top: 65px;
+  left: 0;
+  background: #fff;
+  padding: 10px 0;
+  min-width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.18);
+  display: none;
+  flex-direction: column;
+  z-index: 9999991;
+  animation: fadeIn 0.25s ease;
+    list-style: none !important;
+
 }
 
-.profile-image {
-  width: 50px;
-  height: 50px;
+/* 🔥 Triangle Arrow */
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 28px;
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid red; /* THEME Red */
+}
+
+/* Item Style */
+.dropdown-menu li a {
+  padding: 16px 22px;
+  font-size: 15px;
+  color: #333;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(255, 0, 0, 0.08);
+  color: red;
+}
+
+/* show */
+.dropdown.active .dropdown-menu {
+  display: flex;
+}
+
+/* 🌟 Wallet button */
+.wallet-button {
+  background: red;
+  border: none;
+  color: #fff;
+  height: 45px;
+  padding: 0 22px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.wallet-button:hover {
+  background: #cc0000;
+}
+
+.wallet-address {
+  color: red;
+  font-weight: 600;
+  margin-right: 30px;
+  display: inline-block;
+
+}
+
+/* 🌟 Profile Icon */
+.profile-icon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, #ff4b2b, #ff416c);
   border-radius: 50%;
-  object-fit: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
   cursor: pointer;
-  border: 2px solid #c2185b; /* your theme color */
-  transition: transform 0.2s ease;
+  border: 2px solid red;
+  z-index: 9999999 !important;
+  transition: 0.3s ease;
 }
 
-.profile-image:hover {
-  transform: scale(1.05);
+.profile-icon:hover {
+  transform: scale(1.1);
+}
+
+/* 🌟 Profile Dropdown */
+.profile-dropdown {
+  position: absolute;
+  top: 75px;
+  right: 0;
+  background: #fff;
+  padding: 20px;
+  width: 240px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
+  z-index: 9999999;
+  animation: fadeIn 0.35s ease;
+}
+
+.profile-dropdown p {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.profile-dropdown button {
+  width: 100%;
+  padding: 12px;
+  background: red;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  margin-top: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.profile-dropdown button:hover {
+  background: #cc0000;
+  color:white;
+}
+
+
+/* 🌟 Mobile Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333;
+  z-index: 9999999;
+}
+
+/* 📱 Tablet */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 18px 30px;
+  }
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: #fff;
+    padding: 18px 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    z-index: 999999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 14px 0;
+  }
+
+  /* Mobile dropdown style */
+  .dropdown-menu {
+    position: relative;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .dropdown-menu::before {
+    display: none; /* triangle removed */
+  }
+
+  .dropdown-menu li a {
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-links li a {
+    font-size: 17px;
+  }
+
+  .wallet-button,
+  .wallet-address {
+    margin-right: 10px;
+  }
+
+  .profile-icon {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* 🌟 Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Extra Small Mobile — 480px and below */
+@media (max-width: 480px) {
+
+  .navbar {
+    padding: 14px 18px;
+    height: 70px;
+  }
+
+  /* Logo smaller */
+  .nav-logo {
+    font-size: 32px;
+    letter-spacing: 1px;
+  }
+
+  /* Menu icon bigger */
+  .menu-icon {
+    font-size: 30px;
+  }
+
+  /* Mobile menu full-width */
+  .nav-links {
+    top: 70px;
+    padding: 12px 0;
+  }
+
+  .nav-links li {
+    padding: 12px 0;
+  }
+
+  .nav-links li a {
+    font-size: 15px;
+    padding: 12px 0;
+  }
+
+  /* Dropdown inside mobile */
+  .dropdown-menu {
+    padding: 0;
+    min-width: 100%;
+  }
+
+  .dropdown-menu li a {
+    padding: 14px 0;
+    font-size: 14px;
+  }
+
+  /* Right section buttons */
+  .wallet-button {
+    padding: 0 14px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .wallet-address {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  /* Profile icon smaller */
+  .profile-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  /* Profile dropdown box smaller */
+  .profile-dropdown {
+    width: 200px;
+    padding: 15px;
+  }
+
+  .profile-dropdown button {
+    padding: 10px;
+    font-size: 13px;
+  }
 }

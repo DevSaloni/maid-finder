@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap');
+
+.about-container {
+  min-height: 130vh;
+  width: 100vw;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 0px;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 70px;
+}
+
+/* --- HERO SECTION --- */
+.about-content {
+  width: 100vw;
+  max-width: 100%;
+  min-height: 40vh;
+  background: 
+    linear-gradient(rgba(230,57,70,0.85), rgba(34,34,34,0.7)),
+    url("/images/about-hero.jpg") center center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 70px 8vw 60px 8vw;
+  color: #fff;
+  box-shadow: 0 8px 32px rgba(230,57,70,0.10);
+  position: relative;
+  margin: 0px 0 48px 0;
+}
+
+.about-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.9rem;
+  font-weight: 900;
+  margin-bottom: 12px;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #fff 10%, #e63946 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.about-content h1 span {
+  color: #fff;
+  background: linear-gradient(90deg, #e63946 60%, #fff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-style: italic;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.about-intro {
+  font-size: 1.18rem;
+  color: #fff;
+  margin-bottom: 28px;
+  max-width: 600px;
+  line-height: 1.7;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  text-shadow: 0 2px 12px rgba(230,57,70,0.18);
+}
+
+.start-btn {
+  background: linear-gradient(90deg, #e63946 60%, #ffb4a2 100%) !important;
+  color: #fff;
+  font-size: 1.15rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  padding: 14px 38px;
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(230,57,70,0.13);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.start-btn:hover {
+  background: #fff !important;
+  color: #e63946;
+  border: 2px solid #e63946;
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(230,57,70,0.18);
+}
+
+/* --- BELOW HERO: NO BOXES, ONLY RED ACCENT BAR --- */
+.our-mission, .our-value, .work-process, .connect {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 32px 0 0 0;
+  padding: 0 0 0 18px;
+  width: 100vw;
+  max-width: 1000px;
+  position: relative;
+  z-index: 1;
+  border-left: 5px solid #e63946;
+}
+
+.our-mission h2, .our-value h2, .work-process h2, .connect h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #e63946;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  background: none;
+}
+
+.our-mission p, .our-value p, .work-process p, .connect p {
+  color: #222;
+  font-size: 1.08rem;
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+
+.our-value p strong, .our-value p svg {
+  color: #e63946;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 6px;
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+.our-value p svg {
+  margin-right: 4px;
+  font-size: 1.15em;
+}
+
+/* --- Timeline as vertical stepper --- */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 18px;
+  position: relative;
+  padding-left: 32px;
+}
+
+.timeline-item {
+  position: relative;
+  color: #222;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 0;
+  padding: 12px 18px 12px 32px;
+  margin-bottom: 0;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18px;
+  width: 10px;
+  height: 10px;
+  background: #e63946;
+  border-radius: 50%;
+  z-index: 2;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px #e63946;
+}
+
+.timeline-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 28px;
+  width: 2px;
+  height: calc(100% - 28px);
+  background: #e63946;
+  z-index: 1;
+}
+
+.connect {
+  text-align: center;
+  margin-bottom: 30px;
+  border-left: 5px solid #e63946;
+}
+
+.connect .icon {
+  color: #e63946;
+  margin-right: 8px;
+  font-size: 1.1em;
+  vertical-align: middle;
+}
+
+.contact-link {
+  display: inline-block;
+  margin-top: 18px;
+  background: #e63946;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding: 10px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 12px rgba(230,57,70,0.13);
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  border: none;
+}
+
+.contact-link:hover {
+  background: #fff;
+  color: #e63946;
+  transform: scale(1.07);
+  border: 2px solid #e63946;
+}
+
+/* 💻 Tablet (≤1024px) */
+@media (max-width: 1024px) {
+  .about-content {
+    padding: 50px 5vw;
+    /* border-radius: 22px; */
+  }
+
+  .about-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .about-intro {
+    font-size: 1.05rem;
+  }
+
+  .our-mission, .our-value, .work-process, .connect {
+    padding-left: 12px;
+    max-width: 96vw;
+  }
+
+  .timeline-item {
+    font-size: 1rem;
+  }
+}
+
+/* 📲 Mobile (≤768px) */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 40px 4vw;
+    /* border-radius: 16px; */
+  }
+
+  .about-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .about-intro {
+    font-size: 1rem;
+  }
+
+  .our-mission, .our-value, .work-process, .connect {
+    padding-left: 10px;
+    max-width: 98vw;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-item {
+    font-size: 0.95rem;
+  }
+
+  .start-btn {
+    font-size: 1rem;
+    padding: 12px 30px;
+  }
+}
+
+/* 📱 Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .about-content {
+    padding: 25px 3vw;
+    /* border-radius: 10px; */
+  }
+
+  .about-content h1 {
+    font-size: 1.3rem;
+  }
+
+  .about-intro {
+    font-size: 0.95rem;
+  }
+
+  .our-mission, .our-value, .work-process, .connect {
+    padding-left: 8px;
+    max-width: 99vw;
+  }
+
+  .timeline {
+    padding-left: 14px;
+  }
+
+  .timeline-item {
+    font-size: 0.9rem;
+    padding: 8px 8px 8px 20px;
+  }
+
+  .start-btn {
+    font-size: 0.9rem;
+    padding: 10px 24px;
+  }
+}
+
+
+

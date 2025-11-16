@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* ==== Sidebar ==== */
+.sidebar {
+  position: sticky;
+  top: 80px; /* below navbar */
+  height: calc(100vh - 85px);
+  width: 290px;
+  background: #ffffff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  overflow-y: auto;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 10px;
+  z-index: 50; /* below navbar but above content */
+}
+
+/* Sidebar Title */
+.sidebar-title {
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e63946;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  font-size: 18px;
+}
+
+.sidebar-menu li {
+  margin-bottom: 1.2rem;
+}
+
+.sidebar-menu a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-menu a:hover {
+  background: #ffe8ea;
+  color: #e63946;
+  transform: translateX(4px);
+}
+
+/* Icons */
+.sidebar-icon {
+  font-size: 1.1rem;
+  color: #e63946;
+}
+
+/* Wallet Section */
+.wallet-btn {
+  background: #fafafa;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(230, 57, 70, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+.wallet-btn p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+  word-break: break-word;
+}
+
+.wallet-btn button {
+  width: 100%;
+  padding: 8px 0;
+  border: none;
+  background: #e63946;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.wallet-btn button:hover {
+  background: #c12a36;
+}
+
+/* Scrollbar Style */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background: #e63946;
+  border-radius: 3px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ✅ Sidebar Toggle Button — placed LOWER than navbar icon */
+.menu-toggle {
+  display: none;
+  position: fixed;
+  top: 130px; /* placed below navbar hamburger */
+  left: 20px;
+  font-size: 24px;
+  background: #e63946;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+/* ✅ Overlay for mobile view */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 800;
+  backdrop-filter: blur(2px);
+}
+
+/* 💻 Tablet & Mobile Responsive */
+@media (max-width: 992px) {
+  .sidebar {
+    position: fixed;
+    transform: translateX(-100%);
+    top: 0; /* starts from top on mobile */
+    height: 100vh; /* full screen height */
+    width: 260px;
+    border-radius: 0;
+    z-index: 1000;
+  }
+
+  .sidebar.active {
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar-title{
+    padding-top: 90px;
+
+  }
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* 📱 Small Mobile (below 480px) */
+@media (max-width: 480px) {
+  .sidebar {
+    width: 220px;
+    padding: 15px;
+  }
+
+  .sidebar-title {
+    font-size: 1.1rem;
+    padding-top: 90px;
+  }
+
+  .sidebar-menu a {
+    font-size: 0.95rem;
+  }
+
+  .wallet-btn {
+    padding: 10px;
+  }
+
+  .wallet-btn button {
+    font-size: 0.9rem;
+  }
+
+  .menu-toggle {
+    top: 120px; /* keeps below navbar hamburger */
+    left: 15px;
+    font-size: 22px;
+    padding: 6px 10px;
+  }
+}

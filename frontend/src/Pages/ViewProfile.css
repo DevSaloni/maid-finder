@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+/* ================= LOADER ================= */
+.loader-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  border: 6px solid #ffe6e6;
+  border-top: 6px solid #e63946;
+  border-radius: 50%;
+  width: 65px;
+  height: 65px;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ================= LAYOUT ================= */
+.profile-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 80px;
+}
+
+/* ================= SIDEBAR ================= */
+.profile-sidebar {
+  width: 400px;
+  background: #fff;
+  padding: 24px 16px;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Card */
+.maid-info-card {
+  text-align: center;
+  background: linear-gradient(145deg, #fff, #ffe6e6);
+  padding: 20px 12px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(230,57,70,0.12);
+}
+
+.maid-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e63946;
+  margin-bottom: 12px;
+}
+
+.maid-info-card h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+/* Wallet text */
+.wallet-text {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.profile-status {
+  background: #e63946;
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 12px;
+  border: none;
+}
+
+/* ================= DROPDOWN ================= */
+.dropdown-section {
+  background: #fff0f2;
+  padding: 12px 14px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(230,57,70,0.08);
+  cursor: pointer;
+}
+
+.dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dropdown-header h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e63946;
+}
+
+.arrow {
+  transition: 0.3s;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ================= BUTTONS ================= */
+.maid-buttons button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  margin-top: 40px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.hire-btn {
+  background: linear-gradient(90deg, #e63946 60%, #ffb4a2 100%);
+  color: #fff;
+  font-size: 18px;
+}
+
+.back-btn {
+  background: #fff;
+  color: #e63946;
+  border: 2px solid #e63946;
+  font-size: 18px;
+}
+
+/* ================= MAIN ================= */
+.profile-main {
+  flex: 1;
+  padding: 28px 32px;
+}
+
+.profile-main h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #e63946;
+  font-size: 2.3rem;
+  margin-bottom: 16px;
+}
+
+/* ========================================================= */
+/* ================= PREMIUM JOB TABLE ===================== */
+/* ========================================================= */
+
+.job-table-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+}
+
+.job-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0px 6px 20px rgba(0,0,0,0.12);
+}
+
+/* Header */
+.job-table thead {
+  background: linear-gradient(135deg, #e63946, #ff758f);
+  color: #fff;
+}
+
+.job-table th {
+  padding: 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+/* Body rows */
+.job-table tbody tr {
+  transition: 0.25s ease;
+}
+
+.job-table tbody tr:nth-child(even) {
+  background: rgba(255, 230, 230, 0.5);
+}
+
+.job-table tbody tr:nth-child(odd) {
+  background: rgba(255, 240, 242, 0.5);
+}
+
+.job-table tbody tr:hover {
+  background: rgba(230, 57, 70, 0.12);
+  transform: scale(1.005);
+}
+
+.job-table td {
+  padding: 14px;
+  font-size: 0.92rem;
+  color: #333;
+  border-bottom: 1px solid rgba(230,57,70,0.15);
+}
+
+/* Status badge */
+td[data-status="Active"] {
+  color: #1a73e8;
+  font-weight: 600;
+}
+td[data-status="Paid"] {
+  color: #28a745;
+  font-weight: 600;
+}
+td[data-status="Cancelled"] {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+/* Buttons inside table */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.btn-primary {
+  background: #e63946;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  background: #c82736;
+}
+
+.btn-primary:disabled {
+  background: gray;
+}
+
+.btn-secondary {
+  background: #222;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #444;
+}
+
+/* ================= 📱 TABLET (768px–1024px) ================= */
+@media (max-width: 1024px) {
+  .profile-layout {
+    flex-direction: column;
+  }
+
+  .profile-sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 12px;
+  }
+
+  .maid-info-card {
+    min-width: 260px;
+  }
+}
+
+/* ================= 📱 MOBILE BELOW 768px ================= */
+@media (max-width: 768px) {
+  .profile-main h2 {
+    font-size: 1.7rem;
+  }
+
+  .maid-info-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .profile-sidebar {
+    flex-direction: column;
+  }
+}
+
+/* ================= 📱 SMALL MOBILE BELOW 480px ================= */
+@media (max-width: 480px) {
+  .profile-main {
+    padding: 15px;
+  }
+
+  .maid-avatar {
+    width: 90px;
+    height: 90px;
+  }
+
+  .profile-main h2 {
+    font-size: 1.5rem;
+  }
+
+  .dropdown-section {
+    padding: 10px;
+  }
+}

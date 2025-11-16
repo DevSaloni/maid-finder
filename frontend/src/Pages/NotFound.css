@@ -1,0 +1,20 @@
+.not-found {
+  text-align: center;
+  margin-top: 170px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.not-found h1 {
+  font-size: 3rem;
+  color: #f50057;
+}
+
+.not-found a {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #f50057;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}

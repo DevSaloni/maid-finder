@@ -1,0 +1,305 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap");
+
+/* === PAGE CONTAINER === */
+.maid-job-container {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  min-height: 100vh;
+  width: 100%;
+  padding-bottom: 60px;
+  padding-top: 82px;
+}
+
+/* === HERO SECTION === */
+.maid-hero {
+  width: 100vw;
+  height: 42vh;
+  margin: 0 auto 30px auto;
+  background: linear-gradient(rgba(230, 57, 70, 0.85), rgba(34, 34, 34, 0.7)),
+    url("/images/maid-back.jpeg") center/cover no-repeat;
+  color: white;
+  padding: 60px 40px;
+  border-radius: 2px;
+  box-shadow: 0 8px 24px rgba(230, 57, 70, 0.15);
+  text-align: left;
+}
+
+.maid-hero h1 {
+  padding-top: 45px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.9rem;
+  letter-spacing: 1.5px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #fff 15%, #e63946 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.maid-hero h1 span{
+  color: #fff;
+  font-style: italic;
+  font-weight: 900;
+}
+.maid-hero p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #f8f8f8;
+  max-width: 500px;
+  line-height: 1.7;
+}
+
+/* === FILTER BUTTONS === */
+.filter {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 105px auto 40px auto;
+  flex-wrap: wrap;
+}
+
+.filter button {
+  border: 2px solid #e63946;
+  background: #fff;
+  color: #e63946;
+  padding: 10px 22px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.filter button.active,
+.filter button:hover {
+  background: #e63946;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* === TABLE SECTION === */
+.job-list {
+  width: 90vw;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+}
+
+.job-list table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 670px; /* ✅ keeps columns neat even on small screens */
+}
+
+.job-list th {
+  background: #e63946;
+  color: #fff;
+  text-align: left;
+  padding: 1rem;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.job-list td {
+  padding: 0.9rem 1rem;
+  border-bottom: 1px solid #f2f2f2;
+  color: #222;
+  font-weight: 500;
+}
+
+.job-list tr:hover {
+  background: #fff5f5;
+}
+
+/* === STATUS BADGES === */
+.status {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.status.active {
+  background: #ffdde1;
+  color: #e63946;
+}
+
+.status.completed {
+  background: #d1f7c4;
+  color: #2e7d32;
+}
+
+.status.cancelled {
+  background: #f8d7da;
+  color: #b71c1c;
+}
+
+/* === BUTTONS === */
+.job-list button {
+  border: none;
+  cursor: pointer;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  white-space: nowrap; /* ✅ prevents text break */
+}
+
+.btn-primarys {
+  background: linear-gradient(90deg, #e63946 70%, #ffb4a2) !important;
+  color: #fff !important;
+  max-width: 122px;
+}
+
+.btn-primarys:hover {
+  transform: scale(1.05);
+  background: #e63946 ;
+}
+
+.job-list button:last-child {
+  border: 2px solid #e63946;
+  background: #fff;
+  color: #e63946;
+}
+
+.job-list button:last-child:hover {
+  background: #e63946;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* === EMPTY STATE === */
+.no-jobs {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+  padding: 1rem;
+}
+
+/* === SPACE BETWEEN CONFIRM & VIEW DETAILS BUTTONS === */
+.action-buttons {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+.action-buttons .btn-primarys{
+  padding: 6px 12px;
+  width: 10px;
+}
+
+
+/* === ✅ RESPONSIVE DESIGN === */
+
+/* 📱 For Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .maid-hero {
+    height: 30vh;
+    padding: 40px 30px;
+  }
+
+  .maid-hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .maid-hero p {
+    font-size: 1.1rem;
+  }
+
+  .filter {
+    margin: 90px auto 30px auto;
+  }
+
+  .filter button {
+    padding: 9px 18px;
+    font-size: 0.95rem;
+  }
+
+  .job-list {
+    width: 95vw;
+  }
+}
+
+/* 📱 For Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .maid-hero {
+    height: 28vh;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .maid-hero h1 {
+    font-size: 2rem;
+    padding-top: 25px;
+  }
+
+  .maid-hero p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 8px auto;
+  }
+
+  .filter {
+    margin: 60px auto 30px auto;
+    gap: 8px;
+  }
+
+  .filter button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .job-list table {
+    min-width: 600px;
+  }
+
+  .job-list {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+}
+
+/* 📱 For Small Mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+  .maid-hero {
+    height: 25vh;
+    padding: 20px 15px;
+  }
+
+  .maid-hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .maid-hero p {
+    font-size: 0.9rem;
+  }
+
+  .filter {
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto 25px auto;
+  }
+
+  .filter button {
+    width: 80%;
+    font-size: 0.9rem;
+  }
+
+  .job-list {
+    width: 95%;
+    overflow-x: auto;
+  }
+
+  .job-list table {
+    min-width: 550px;
+  }
+
+  .job-list button {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}

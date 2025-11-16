@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;600&display=swap");
+
+/* ✅ Page Container */
+.user-register-container {
+  width: 100%;
+  min-height: 89vh;
+  background: url("/images/panel-back.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 60px 20px;
+  position: relative;
+  padding-top: 140px;
+}
+
+/* ✅ Form Box */
+.user-form-container {
+  background: rgba(255,255,255,0.95);
+  width: 480px;
+  border-left: 6px solid #e63946;
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 36px 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeSlide 0.6s ease-in-out;
+}
+
+/* ✅ Form Title */
+.user-form-container h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #e63946;
+  font-weight: 900;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.user-form-container p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.user-form-container .login-link a {
+  color: #e63946;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.user-form-container .login-link a:hover {
+  text-decoration: underline;
+}
+
+/* --- Inputs & Textareas --- */
+.input-group {
+  position: relative;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 99%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.8px solid #ddd;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus ,
+.input-group select:focus{
+  border-color: #e63946;
+  box-shadow: 0 0 6px rgba(230, 57, 70, 0.3);
+}
+
+.input-group  select{
+   width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1.8px solid #ddd;
+  background: #fff;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+    color: #555;
+
+}
+
+.input-group textarea {
+  resize: none;
+  height: 90px;
+}
+
+/* --- Password Eye Icon --- */
+.eye-icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #e63946;
+  font-size: 1.1rem;
+}
+
+/* --- Button Group --- */
+.user-form-container button {
+  width: 100%;
+  padding: 14px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  border: none;
+  margin-top: 10px;
+}
+
+/* 🔴 Primary Button */
+.user-register-btn {
+  background: linear-gradient(90deg, #e63946 60%, #ffb4a2 100%);
+  color: #fff;
+}
+
+.user-register-btn:hover {
+  background: #fff;
+  color: #e63946;
+  border: 2px solid #e63946;
+  transform: translateY(-2px);
+}
+
+/* ✅ Animation */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* =============== 💻 Tablet (768px - 1024px) =============== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .user-register-container {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user-form-container {
+    width: 60%; /* ✅ smaller width — fits well on tablet screens */
+    max-width: 650px; /* ✅ prevent form from stretching too wide */
+    padding: 28px 30px; /* ✅ balanced padding */
+    border-left: 5px solid #e63946;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15); /* ✅ gives nice depth */
+    border-radius: 12px;
+  }
+
+  .user-form-container h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .user-form-container p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .input-group {
+    margin-bottom: 16px;
+  }
+
+  .input-group input,
+  .input-group select,
+  .input-group textarea {
+    width: 96%;
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  .user-form-container button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 0;
+    border-radius: 8px;
+  }
+}
+
+
+/* =============== 📱 Mobile (Below 768px) =============== */
+@media (max-width: 768px) {
+  .user-register-container {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+
+  .user-form-container {
+    width: 90%;
+    padding: 28px 26px;
+    border-left: 5px solid #e63946;
+  }
+
+  .user-form-container h1 {
+    font-size: 1.7rem;
+  }
+
+  .user-form-container p {
+    font-size: 0.9rem;
+  }
+
+  .input-group input,
+  .input-group select,
+  .input-group textarea {
+    font-size: 0.9rem;
+    padding: 9px 11px;
+  }
+
+  .user-form-container button {
+    font-size: 0.9rem;
+    padding: 11px 0;
+  }
+}
+
+/* =============== 📱 Small Mobile (Below 480px) =============== */
+@media (max-width: 480px) {
+  .user-register-container {
+    padding: 20px 10px;
+  }
+
+  .user-form-container {
+    width: 85%; /* ✅ reduced from 90% → fits nicely on small phones */
+    max-width: 320px; /* ✅ prevents over-stretching on large phones */
+    padding: 20px 16px; /* ✅ slightly reduced inner padding */
+    border-left: 4px solid #e63946;
+  }
+  
+  .user-form-container h1 {
+    font-size: 1.4rem;
+  }
+
+  .user-form-container p {
+    font-size: 0.85rem;
+  }
+
+  .input-group input,
+  .input-group select,
+  .input-group textarea {
+    font-size: 0.85rem;
+    padding: 8px 10px;
+  }
+
+  .user-form-container button {
+    font-size: 0.85rem;
+    padding: 10px 0;
+  }
+}

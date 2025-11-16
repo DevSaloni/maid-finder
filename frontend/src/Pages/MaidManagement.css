@@ -1,0 +1,124 @@
+/* Main Layout */
+.maid-manage-dash {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dashboard h2{
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 30px;
+}
+
+/* Content Area */
+.maid-content {
+  flex: 1;
+  padding: 30px;
+}
+
+.maid-content h2 {
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Search Section */
+.maid-search {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+
+.maid-search input {
+  flex: 1;
+  padding: 15px 17px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+.maid-status-drop select {
+  padding: 15px 22px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+/* Maid Info Table */
+.maid-infos {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.maid-infos table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.maid-infos th{
+  color:black;
+  font-weight: 700;
+}
+.maid-infos th,
+.maid-infos td {
+  text-align: left;
+  padding: 12px;
+  /* border-bottom: 1px solid #eee; */
+}
+
+.maid-infos th {
+  background: #f1f5f9;
+  font-weight: 600;
+}
+
+/* Profile link */
+.profile-link {
+  color: #007bff;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* Status */
+.status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+.status.active { background: #e6f7f1; color: #1abc9c; }
+.status.pending { background: #fff3cd; color: #856404; }
+.status.rejected { background: #f8d7da; color: #721c24; }
+
+/* Action buttons */
+.action-buttons button {
+  margin-right: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.verify-btn {
+  background: #28a745;
+  color: white;
+}
+
+.verify-btn:hover {
+  background: #218838;
+}
+
+.reject-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.reject-btn:hover {
+  background: #c82333;
+}

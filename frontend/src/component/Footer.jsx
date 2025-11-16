@@ -1,44 +1,70 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import './Footer.css' 
-import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaLinkedin, FaInstagram, FaGithub, FaTwitter } from "react-icons/fa";
+import "./Footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer-container">
-      <div className="footer-section quick-links">
-        <h3>Quick Links</h3>
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/work">How It Works</Link>
-        <Link to="/contactus">Contact Us</Link>
+
+      {/* Brand */}
+      <div className="footer-brand">
+        <h1>SheWorks</h1>
+        <p>Connecting Homes with Trusted Maids, Powered by Decentralization</p>
       </div>
 
-      <div className="footer-section popular-services">
-        <h3>Popular Services</h3>
-        <p>Child Care</p>
-        <p>Housekeeping</p>
-        <p>Baby Care</p>
-        <p>Senior Care</p>
+      {/* Quick Links */}
+      <div className="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/about">About</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
+        </ul>
       </div>
 
-      <div className="footer-section contact-info">
-        <h3>Contact</h3>
-        <p>Pune, Maharashtra</p>
+      {/* Employers */}
+      <div className="footer-links">
+        <h4>Employers</h4>
+        <ul>
+          <li><Link to="/create-job">Post Job</Link></li>
+          <li><Link to="/search-maid">Find Maid</Link></li>
+        </ul>
+      </div>
+
+      {/* Maids */}
+      <div className="footer-links">
+        <h4>Maids</h4>
+        <ul>
+          <li><Link to="/register-maid">Register</Link></li>
+          <li><Link to="/my-jobs">My Jobs</Link></li>
+        </ul>
+      </div>
+
+      {/* Contact */}
+      <div className="footer-contact">
+        <h4>Contact</h4>
+        <p>Email: support@sheworks.com</p>
         <p>Phone: +91 9876543210</p>
-        <p>Email: maid29service@gmail.com</p>
       </div>
 
-      <div className="footer-section social-media">
-        <h3>Follow Us</h3>
-        <div className="icons">
-        <a href="#"><FaFacebookF /></a>
-        <a href="#"><FaInstagram /></a>
-        <a href="#"><FaTwitter /></a>
+      {/* Social Media */}
+      <div className="footer-social">
+        <h4>Follow Us</h4>
+        <div className="social-icons">
+          <a href="#"><FaLinkedin /></a>
+          <a href="#"><FaInstagram /></a>
+          <a href="#"><FaGithub /></a>
+          <a href="#"><FaTwitter /></a>
         </div>
       </div>
-    </footer>
-  )
-}
 
-export default Footer
+      {/* Bottom Copy */}
+      <div className="footer-bottom">
+        <p>© 2025 SheWorks. All Rights Reserved.</p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

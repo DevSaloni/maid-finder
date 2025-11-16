@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@400;500;600&display=swap');
+
+.post-job-container {
+  max-width: 570px;
+  margin: 40px auto;
+  margin-top: 90px;
+  padding: 32px 28px;
+  background: #111; /* Dark card background */
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  max-height: 700px;
+}
+
+.post-job-container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.9rem;
+  color: #e63946;
+  margin-bottom: 12px;
+}
+
+.post-job-container p {
+  font-size: 0.97rem;
+  color: #ccc;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+/* --- FORM --- */
+.post-job-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.post-job-form label {
+  font-weight: 600;
+  color: #fff;
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.post-job-form input,
+.post-job-form textarea {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 2px solid #333;
+  background: #222;
+  color: #fff;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s;
+}
+
+.post-job-form input:focus,
+.post-job-form textarea:focus {
+  border-color: #e63946;
+  outline: none;
+  box-shadow: 0 0 10px rgba(230,57,70,0.5);
+}
+
+.post-job-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* --- BUTTONS --- */
+.form-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.btn-primarys,
+.btn-secondary {
+  flex: 1;
+  padding: 12px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 1rem;
+}
+
+.btn-primarys {
+  background: #e63946;
+  color: #fff;
+  border: none;
+}
+
+.btn-primarys:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+.btn-secondary {
+  background: #fff;
+  color: #e63946;
+  border: 2px solid #e63946;
+}
+
+.btn-secondary:hover {
+  background: #e63946;
+  color: #fff;
+  transform: scale(1.03);
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .post-job-container {
+    max-width: 75%;
+    padding: 28px 26px;
+    margin-top: 90px;
+  }
+
+  .post-job-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .post-job-form input,
+  .post-job-form textarea {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .btn-primarys,
+  .btn-secondary {
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-job-container {
+    max-width: 90%;
+    padding: 22px 18px;
+    margin: 30px auto;
+        margin-top: 90px;
+
+  }
+
+  .post-job-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .post-job-form input,
+  .post-job-form textarea {
+    font-size: 0.9rem;
+    padding: 11px;
+  }
+
+  .btn-primarys,
+  .btn-secondary {
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 432px) {
+  .post-job-container {
+    max-width: 95%;
+    padding: 20px 16px;
+    margin: 20px auto;
+    margin-top: 90px;
+  }
+
+  .post-job-container h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .post-job-container p {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .post-job-form {
+    gap: 14px;
+  }
+
+  .post-job-form label {
+    font-size: 0.85rem;
+  }
+
+  .post-job-form input,
+  .post-job-form textarea {
+    font-size: 0.85rem;
+    padding: 10px;
+  }
+
+  /* Buttons stack vertically */
+  .form-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-primarys,
+  .btn-secondary {
+    font-size: 0.85rem;
+    padding: 10px 0;
+  }
+}
