@@ -1,5 +1,5 @@
 import { ethers } from "ethers";
-import ABI from '../../blockchain/artifacts/contracts/MaidFinder.sol/MaidFinder.json';
+import ABI from '../abi/MaidFinder.json';
 
 const CONTRACT_ADDRESS = "0xfe34aBAc056AE81d0a33Ede4A3E9AF5DC8e338C1";
 

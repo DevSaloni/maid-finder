@@ -239,7 +239,7 @@ const RegisterMaid = () => {
       });
 
       const uploadRes = await axios.post(
-        `${BASE_URL}/api/maids/upload`,
+        `${BASE_URL}/api/maids/uploads`,
         form,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

@@ -1,7 +1,7 @@
 //instance of contract
 
 const {ethers} = require("ethers");
-const contractABI = require("../../blockchain/artifacts/contracts/MaidFinder.sol/MaidFinder.json");
+const contractABI = require("../contractABI/MaidFinder.json");
 
 const provider = new ethers.JsonRpcProvider(process.env.RPC_URL);
 const wallet = new ethers.Wallet(process.env.PRIVATE_KEY,provider);

@@ -15,7 +15,7 @@ const router = express.Router();
 
 // File upload → Pinata
 router.post(
-  "/upload",
+  "/uploads",
   upload.fields([
     { name: "profilePhoto", maxCount: 1 },
     { name: "idProof", maxCount: 1 }
@@ -33,7 +33,7 @@ router.get("/all", getAllMaid);
 router.get("/maid/:wallet", getMaid);
 
 // get maid by id
-router.get("/:id", getMaidById);
+// router.get("/:id", getMaidById);
 
 router.get("/check/:wallet",getMaidFromWallet)
 // update status

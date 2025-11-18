@@ -18,6 +18,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors());
 
+app.use("/uploads", express.static("uploads"));
+
 //mongo db connect
 mongoose.connect(process.env.MONGO_URL).then(() =>{
     console.log("mongodb connected successfully");
